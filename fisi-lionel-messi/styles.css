@@ -1,0 +1,528 @@
+/* =====================================================
+   1. RESETEO BÁSICO
+   ===================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =====================================================
+   2. FONDO GENERAL (MESSI)
+   ===================================================== */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #ffffff;
+  background: #000 url("assets/Messi - best player in the world by FIFA.png.jpg")
+             center/cover fixed no-repeat;
+  min-height: 100vh;
+}
+
+/* Capa oscura para que el texto siempre se lea bien */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: -1;
+}
+
+/* =====================================================
+   3. CONTENEDOR PRINCIPAL
+   ===================================================== */
+main {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+/* =====================================================
+   4. CARÁTULA / TARJETA
+   ===================================================== */
+.caratula {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  padding: 28px 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(10px);
+}
+
+/* =====================================================
+   5. ENCABEZADO (LOGOS + TÍTULO)
+   ===================================================== */
+
+/* =====================================================
+   HERO (ENCABEZADO)
+   ===================================================== */
+
+.hero {
+  display: flex;
+  align-items: center;      /* 🔥 Alinea logos y texto verticalmente */
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding: 0 20px;
+}
+
+/* LOGOS */
+.hero img {
+  height: 120px;            /* Puedes subir a 130 si quieres más grande */
+  width: auto;
+  object-fit: contain;
+  background: transparent !important;
+  mix-blend-mode: multiply;
+}
+
+/* TEXTO CENTRAL */
+.hero-text {
+  text-align: center;
+  flex: 1;
+}
+
+/* TÍTULO PRINCIPAL */
+.hero-text h1 {
+  font-size: 40px;          /* 🔥 Más grande y elegante */
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #ffffff;
+  line-height: 1.2;
+  letter-spacing: 0.5px;
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.6);
+}
+
+/* SUBTÍTULO */
+.hero-text h2 {
+  font-size: 22px;
+  font-style: italic;
+  color: #dcecff;
+  line-height: 1.3;
+}
+
+
+/* =====================================================
+   6. BLOQUES DE DATOS (ESTUDIANTE / DOCENTE)
+   ===================================================== */
+.datos {
+  display: flex;
+  gap: 28px;
+  margin-top: 10px;
+}
+
+.bloque-datos {
+  flex: 1;
+}
+
+.bloque-datos p {
+  margin: 5px 0;
+  font-size: 15px;
+}
+
+/* =====================================================
+   7. ÍNDICE DEL PORTAL
+   ===================================================== */
+.indice-presentacion {
+  margin-top: 28px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 18px;
+  padding: 22px 26px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.indice-presentacion h3 {
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
+/* lista vertical de enlaces */
+.lista-indice {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  padding: 0;
+}
+
+/* botón/enlace del índice */
+.lista-indice a {
+  display: block;
+  text-decoration: none;
+  background: linear-gradient(135deg, #006aff, #00cfff);
+  color: #fff;
+  padding: 10px 22px;
+  width: 450px;         /* ya no se estira a todo el ancho */
+  max-width: 90%;
+  border-radius: 25px;
+  font-size: 15px;
+  text-align: center;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.lista-indice a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 12px rgba(0, 180, 255, 0.8);
+}
+
+/* =====================================================
+   8. FOOTER
+   ===================================================== */
+footer {
+  text-align: center;
+  margin: 25px 0 10px;
+  font-size: 14px;
+  color: #dddddd;
+}
+
+/* =====================================================
+   9. RESPONSIVE
+   ===================================================== */
+@media (max-width: 768px) {
+
+  main {
+    margin: 20px auto;
+    padding: 14px;
+  }
+
+  .hero {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero img {
+    height: 100px;
+  }
+
+  .hero-text h1 {
+    font-size: 28px;
+  }
+
+  .hero-text h2 {
+    font-size: 18px;
+  }
+
+  .datos {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+
+
+
+
+
+/* =====================================================
+   PRINCIPAL.HTML - ESTILOS ESPECÍFICOS (DISEÑO SIMPLE)
+   SOLO PARA body class="principal-page"
+   ===================================================== */
+
+/* Contenedor general */
+body.principal-page main {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+/* ===== Encabezado de la página principal ===== */
+
+body.principal-page .principal-header {
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 18px;
+  padding: 18px 22px;
+  margin-bottom: 16px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
+}
+
+body.principal-page .principal-header h1 {
+  font-size: 30px;
+  margin-bottom: 6px;
+  line-height: 1.3;
+}
+
+body.principal-page .principal-header p {
+  font-size: 15px;
+  color: #e0e7ff;
+}
+
+/* ===== Bloques de contenido (cada section) ===== */
+
+body.principal-page main section {
+  margin-bottom: 28px;
+  background: rgba(0, 0, 0, 0.78);
+  border-radius: 18px;
+  padding: 18px 20px 22px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+}
+
+/* título de cada sección */
+body.principal-page main section h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+/* párrafos dentro de las secciones */
+body.principal-page main section p {
+  font-size: 15.5px;
+  line-height: 1.6;
+  text-align: justify;
+  margin-bottom: 8px;
+}
+
+/* ==== Imágenes emparejadas del mismo tamaño ==== */
+.imagenes-parejas {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin: 20px 0;
+}
+
+.imagenes-parejas img {
+  width: 350px;       /* 🔥 ajusta este tamaño si quieres más grande o más pequeño */
+  height: 230px;      /* 🔥 ambas imágenes tendrán EXACTAMENTE esta medida */
+  object-fit: cover;  /* mantiene proporción sin deformarse */
+  border-radius: 15px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.7);
+}
+
+  
+
+/* limpiar el float para que el fondo de la tarjeta envuelva todo */
+body.principal-page main section::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* ===== Bloque del video ===== */
+
+body.principal-page .video-messi {
+  text-align: center;
+  margin: 14px 0 6px;
+  clear: both;
+}
+
+body.principal-page .video-messi iframe {
+  max-width: 100%;
+  width: 480px;
+  height: 270px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.75);
+}
+
+body.principal-page .video-messi p {
+  margin-top: 6px;
+  font-size: 14px;
+  color: #dcdcdc;
+}
+
+/* ===== Índice de contenidos (última sección) ===== */
+
+body.principal-page .indice-principal {
+  /* aquí NO queremos float ni nada raro */
+}
+
+body.principal-page .indice-principal ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 8px;
+}
+
+body.principal-page .indice-principal li {
+  margin: 6px 0;
+}
+
+body.principal-page .indice-principal a {
+  text-decoration: none;
+  color: #ffffff;
+  background: linear-gradient(135deg, #006aff, #00cfff);
+  padding: 7px 14px;
+  border-radius: 18px;
+  display: inline-block;
+  font-size: 14px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+body.principal-page .indice-principal a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 12px rgba(0, 200, 255, 0.8);
+}
+
+/* ===== Footer en principal ===== */
+body.principal-page footer {
+  margin-top: 20px;
+}
+.messi-copa {
+  width: 350px;      /* 🔥 AJUSTA EL TAMAÑO AQUÍ */
+  height: auto;
+  display: block;
+  margin: 20px auto; /* centrado */
+  border-radius: 15px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.6);
+}
+
+
+
+
+
+
+/* =====================================================
+   1. ESTILO GENERAL PARA PÁGINAS SECUNDARIAS
+   (usa la misma clase que ya pusimos: .principal-page)
+   ===================================================== */
+body.principal-page {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #ffffff;
+  background: #000 url("assets/Messi - best player in the world by FIFA.png.jpg")
+             center/cover fixed no-repeat;
+  min-height: 100vh;
+}
+
+/* Capa oscura para que el texto se lea bien */
+body.principal-page::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+
+/* Contenedor principal */
+body.principal-page main {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px 24px;
+  background: rgba(0, 0, 0, 0.55);
+  border-radius: 12px;
+  box-shadow: 0 0 18px rgba(0, 0, 0, 0.7);
+}
+
+/* =====================================================
+   2. TITULOS Y PÁRRAFOS
+   ===================================================== */
+body.principal-page h1 {
+  font-size: 2rem;
+  margin-bottom: 16px;
+  text-align: center;
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.8);
+}
+
+body.principal-page h2 {
+  font-size: 1.4rem;
+  margin-top: 24px;
+  margin-bottom: 10px;
+  color: #ffd369;
+}
+
+body.principal-page p {
+  line-height: 1.6;
+  margin-bottom: 10px;
+  text-align: justify;
+}
+
+/* =====================================================
+   3. IMÁGENES EN PAREJA
+   ===================================================== */
+.imagenes-parejas {
+  margin: 18px 0;
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.imagenes-parejas img {
+  max-width: 48%;
+  min-width: 220px;
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  object-fit: cover;
+}
+
+/* =====================================================
+   4. BLOQUE DE AUDIO
+   ===================================================== */
+.audio-messi {
+  margin: 20px 0;
+  padding: 12px 16px;
+  background: rgba(0, 0, 0, 0.55);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.audio-messi h3 {
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+  color: #ffeaa7;
+}
+
+.audio-messi audio {
+  width: 100%;
+}
+
+/* =====================================================
+   5. BLOQUE DE VIDEO
+   ===================================================== */
+.video-messi {
+  margin: 22px 0;
+  text-align: center;
+}
+
+.video-messi iframe {
+  max-width: 100%;
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+}
+
+.video-messi p {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: #f1f1f1;
+}
+
+/* =====================================================
+   6. BOTONES DE NAVEGACIÓN
+   ===================================================== */
+.nav-buttons {
+  margin-top: 26px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.nav-buttons a {
+  flex: 1 1 150px;
+  text-align: center;
+  text-decoration: none;
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid #ffd369;
+  background: rgba(0, 0, 0, 0.75);
+  color: #ffd369;
+  font-weight: bold;
+  transition: 0.2s ease-in-out;
+}
+
+.nav-buttons a:hover {
+  background: #ffd369;
+  color: #000;
+  transform: translateY(-2px);
+}
+
+/* =====================================================
+   7. FOOTER (SI LO USAS EN SECUNDARIAS)
+   ===================================================== */
+footer {
+  text-align: center;
+  padding: 10px 0 20px;
+  font-size: 0.85rem;
+  color: #dddddd;
+}
